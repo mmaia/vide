@@ -1,0 +1,61 @@
+@import url(tools.css);
+
+@import url(typo.css);
+
+@import url(layout-navtop-subright.css);
+
+@import url(layout.css);
+
+@import url(tabs.css);
+
+@import url(../box.css);
+
+@import url(../forms.css);
+
+@import url(../messages.css);
+
+@import url(../search.css);
+
+@import url(jquery/ui.all.css);
+
+@import url(../htmlbox.css);
+
+img.inativo {
+	background-color:#ffffff;
+	opacity: 0.4;
+Ê   filter:alpha(opacity=40);
+	padding: 2px; 
+}
+
+img.ativo {
+	background-color:#ffffff;
+	opacity: 1;
+Ê   filter:alpha(opacity=100);
+	padding: 2px;
+}
+
+div.person_name {
+	text-align: center;
+	font-size: 10px;
+}
+
+div.person {
+	background-color: #f9f9f9;
+	border-width: thin;
+	border-color: #CCCCCC;
+	border-style: solid;
+	padding: 3px;
+	margin:3px;
+	float: left;
+}
+
+textarea.mono {
+	font-size: 12px;
+	font-family: Monaco, Courier New, Courier, monospace;
+	width: 700px;
+	height: 400px;
+}
+
+
+
+

@@ -1,0 +1,4 @@
+CREATE DATABASE pronto
+  WITH OWNER = pronto
+       ENCODING = 'UTF8'
+       CONNECTION LIMIT = -1;

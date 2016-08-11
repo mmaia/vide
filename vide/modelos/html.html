@@ -1,0 +1,955 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-15">
+<style>
+      .table {
+        background-color:#F5F5FF;
+        border-left:4px solid gray;
+        border-bottom:4px solid gray;
+        border-top:4px solid gray;
+        border-right:4px solid gray;
+        margin-bottom:3em;
+        margin-left:2em;
+        margin-right:2em;
+        padding:1em;
+      }
+      .tableNameHeading h1 {
+          display: inline;
+        font-family: Segoe UI, Arial, sans-serif;
+        font-size:125%;
+        font-weight:bold;
+      }
+        
+      .tableNameHeading h2 {
+        display: inline;
+        font-family: Segoe UI, Arial, sans-serif;
+        font-size:115%;
+        font-weight:normal;
+      }
+      
+      .tableComment { 
+        background-color:#e4efff; margin-bottom:20px;
+      }
+      
+      .tableDefinition { 
+        padding:2px;
+        border-collapse:collapse;
+        margin-top:1em;
+      }
+
+      .tdTableDefinition {
+        padding-right:10px;
+        vertical-align:top;
+        border-top:1px solid #C0C0C0;
+      }
+
+      .tdLogicalColName {
+        width:20em;
+      }
+      
+      .tdPhysicalColName {
+        width:20em;
+      }
+      
+      .tdDataType {
+        width:10em;
+      }
+
+      .tdPkFlag {
+        width:4em;
+      }
+
+      .tdNullFlag {
+        width:9em;
+      }
+
+      .tdTableHeading {
+        padding:2px;
+        font-family: Segoe UI, Arial, sans-serif;
+        font-weight: bold;
+        vertical-align:top;
+        border-bottom: 1px solid #C0C0C0;
+        background-color: rgb(240,240,240);
+      }
+      
+      .subTitle {
+        font-family: Segoe UI, Arial, sans-serif;
+        font-weight: bold;
+      }
+
+      .references {
+      }
+      .comment {
+        color:#666666;
+        margin-left:3em;
+        padding:0.25em;
+      }
+    </style>
+<title>Vide_Designer</title>
+</head>
+<body>
+<center>
+<h2>Vide_Designer</h2>
+</center>
+<h3>List of tables</h3>
+<ul>
+<li>
+<a href="#backlog">backlog</a>
+</li>
+<li>
+<a href="#banco_de_dados">banco_de_dados</a>
+</li>
+<li>
+<a href="#cliente">cliente</a>
+</li>
+<li>
+<a href="#execucao">execucao</a>
+</li>
+<li>
+<a href="#kanban_status">kanban_status</a>
+</li>
+<li>
+<a href="#papel">papel</a>
+</li>
+<li>
+<a href="#retrospectiva">retrospectiva</a>
+</li>
+<li>
+<a href="#retrospectiva_item">retrospectiva_item</a>
+</li>
+<li>
+<a href="#script">script</a>
+</li>
+<li>
+<a href="#sprint">sprint</a>
+</li>
+<li>
+<a href="#ticket">ticket</a>
+</li>
+<li>
+<a href="#ticket_comentario">ticket_comentario</a>
+</li>
+<li>
+<a href="#ticket_desenvolvedor">ticket_desenvolvedor</a>
+</li>
+<li>
+<a href="#ticket_log">ticket_log</a>
+</li>
+<li>
+<a href="#ticket_testador">ticket_testador</a>
+</li>
+<li>
+<a href="#tipo_de_ticket">tipo_de_ticket</a>
+</li>
+<li>
+<a href="#tipo_retrospectiva_item">tipo_retrospectiva_item</a>
+</li>
+<li>
+<a href="#usuario">usuario</a>
+</li>
+<li>
+<a href="#usuario_papel">usuario_papel</a>
+</li>
+</ul>
+<div class="tableNameHeading">
+<h1>backlog<a name="backlog"></a>
+</h1>
+<h2>
+      (Physical Name: backlog)
+      </h2>
+</div>
+<div class="table">
+<table class="tableDefinition" width="100%">
+<tr>
+<td class="tdTableHeading tdLogicalColName">Logical Column Name</td><td class="tdTableHeading tdPhysicalColName">Physical Column Name</td><td class="tdTableHeading tdDataType">Type</td><td class="tdTableHeading tdPkFlag">PK</td><td class="tdTableHeading tdNullFlag">Nullable</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">backlog_key (PK)</td><td class="tdTableDefinition">backlog_key</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap>PK</td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">descricao</td><td class="tdTableDefinition">descricao</td><td class="tdTableDefinition">VARCHAR(255)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+</table>
+<div class="references">
+<p class="subTitle">Referenced By</p>
+<ul>
+<li>
+<a href="#ticket">ticket</a> referencing (backlog_key)</li>
+</ul>
+</div>
+</div>
+<div class="tableNameHeading">
+<h1>banco_de_dados<a name="banco_de_dados"></a>
+</h1>
+<h2>
+      (Physical Name: banco_de_dados)
+      </h2>
+</div>
+<div class="table">
+<table class="tableDefinition" width="100%">
+<tr>
+<td class="tdTableHeading tdLogicalColName">Logical Column Name</td><td class="tdTableHeading tdPhysicalColName">Physical Column Name</td><td class="tdTableHeading tdDataType">Type</td><td class="tdTableHeading tdPkFlag">PK</td><td class="tdTableHeading tdNullFlag">Nullable</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">banco_de_dados_key (PK)</td><td class="tdTableDefinition">banco_de_dados_key</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap>PK</td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">nome</td><td class="tdTableDefinition">nome</td><td class="tdTableDefinition">VARCHAR(120)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+</table>
+<div class="references">
+<p class="subTitle">Referenced By</p>
+<ul>
+<li>
+<a href="#execucao">execucao</a> referencing (banco_de_dados_key)</li>
+</ul>
+</div>
+</div>
+<div class="tableNameHeading">
+<h1>cliente<a name="cliente"></a>
+</h1>
+<h2>
+      (Physical Name: cliente)
+      </h2>
+</div>
+<div class="table">
+<table class="tableDefinition" width="100%">
+<tr>
+<td class="tdTableHeading tdLogicalColName">Logical Column Name</td><td class="tdTableHeading tdPhysicalColName">Physical Column Name</td><td class="tdTableHeading tdDataType">Type</td><td class="tdTableHeading tdPkFlag">PK</td><td class="tdTableHeading tdNullFlag">Nullable</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">cliente_key (PK)</td><td class="tdTableDefinition">cliente_key</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap>PK</td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">nome</td><td class="tdTableDefinition">nome</td><td class="tdTableDefinition">VARCHAR(120)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+</table>
+<div class="references">
+<p class="subTitle">Referenced By</p>
+<ul>
+<li>
+<a href="#ticket">ticket</a> referencing (cliente_key)</li>
+<li>
+<a href="#usuario">usuario</a> referencing (cliente_key)</li>
+</ul>
+</div>
+</div>
+<div class="tableNameHeading">
+<h1>execucao<a name="execucao"></a>
+</h1>
+<h2>
+      (Physical Name: execucao)
+      </h2>
+</div>
+<div class="table">
+<table class="tableDefinition" width="100%">
+<tr>
+<td class="tdTableHeading tdLogicalColName">Logical Column Name</td><td class="tdTableHeading tdPhysicalColName">Physical Column Name</td><td class="tdTableHeading tdDataType">Type</td><td class="tdTableHeading tdPkFlag">PK</td><td class="tdTableHeading tdNullFlag">Nullable</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">execucao_key (PK)</td><td class="tdTableDefinition">execucao_key</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap>PK</td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">script_key
+                &nbsp;(<a href="#script">FK</a>)
+              </td><td class="tdTableDefinition">script_key</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">banco_de_dados_key
+                &nbsp;(<a href="#banco_de_dados">FK</a>)
+              </td><td class="tdTableDefinition">banco_de_dados_key</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">username
+                &nbsp;(<a href="#usuario">FK</a>)
+              
+                &nbsp;(<a href="#usuario">FK</a>)
+              </td><td class="tdTableDefinition">username</td><td class="tdTableDefinition">VARCHAR(255)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">data</td><td class="tdTableDefinition">data</td><td class="tdTableDefinition">TIMESTAMP</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+</table>
+<div class="references">
+<p class="subTitle">References</p>
+<ul>
+<li>
+<a href="#script">script</a> through (script_key)</li>
+<li>
+<a href="#usuario">usuario</a> through (username)</li>
+<li>
+<a href="#usuario">usuario</a> through (username)</li>
+<li>
+<a href="#banco_de_dados">banco_de_dados</a> through (banco_de_dados_key)</li>
+</ul>
+</div>
+</div>
+<div class="tableNameHeading">
+<h1>kanban_status<a name="kanban_status"></a>
+</h1>
+<h2>
+      (Physical Name: kanban_status)
+      </h2>
+</div>
+<div class="table">
+<table class="tableDefinition" width="100%">
+<tr>
+<td class="tdTableHeading tdLogicalColName">Logical Column Name</td><td class="tdTableHeading tdPhysicalColName">Physical Column Name</td><td class="tdTableHeading tdDataType">Type</td><td class="tdTableHeading tdPkFlag">PK</td><td class="tdTableHeading tdNullFlag">Nullable</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">kanban_status_key (PK)</td><td class="tdTableDefinition">kanban_status_key</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap>PK</td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">descricao</td><td class="tdTableDefinition">descricao</td><td class="tdTableDefinition">VARCHAR(255)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+</table>
+<div class="references">
+<p class="subTitle">Referenced By</p>
+<ul>
+<li>
+<a href="#ticket">ticket</a> referencing (kanban_status_key)</li>
+</ul>
+</div>
+</div>
+<div class="tableNameHeading">
+<h1>papel<a name="papel"></a>
+</h1>
+<h2>
+      (Physical Name: papel)
+      </h2>
+</div>
+<div class="table">
+<table class="tableDefinition" width="100%">
+<tr>
+<td class="tdTableHeading tdLogicalColName">Logical Column Name</td><td class="tdTableHeading tdPhysicalColName">Physical Column Name</td><td class="tdTableHeading tdDataType">Type</td><td class="tdTableHeading tdPkFlag">PK</td><td class="tdTableHeading tdNullFlag">Nullable</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">papel_key (PK)</td><td class="tdTableDefinition">papel_key</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap>PK</td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">descricao</td><td class="tdTableDefinition">descricao</td><td class="tdTableDefinition">VARCHAR(255)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+</table>
+<div class="references">
+<p class="subTitle">Referenced By</p>
+<ul>
+<li>
+<a href="#usuario_papel">usuario_papel</a> referencing (papel_key)</li>
+</ul>
+</div>
+</div>
+<div class="tableNameHeading">
+<h1>retrospectiva<a name="retrospectiva"></a>
+</h1>
+<h2>
+      (Physical Name: retrospectiva)
+      </h2>
+</div>
+<div class="table">
+<table class="tableDefinition" width="100%">
+<tr>
+<td class="tdTableHeading tdLogicalColName">Logical Column Name</td><td class="tdTableHeading tdPhysicalColName">Physical Column Name</td><td class="tdTableHeading tdDataType">Type</td><td class="tdTableHeading tdPkFlag">PK</td><td class="tdTableHeading tdNullFlag">Nullable</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">retrospectiva_key (PK)</td><td class="tdTableDefinition">retrospectiva_key</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap>PK</td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">sprint_key
+                &nbsp;(<a href="#sprint">FK</a>)
+              
+                &nbsp;(<a href="#sprint">FK</a>)
+              </td><td class="tdTableDefinition">sprint_key</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+</table>
+<div class="references">
+<p class="subTitle">References</p>
+<ul>
+<li>
+<a href="#sprint">sprint</a> through (sprint_key)</li>
+<li>
+<a href="#sprint">sprint</a> through (sprint_key)</li>
+</ul>
+<p class="subTitle">Referenced By</p>
+<ul>
+<li>
+<a href="#retrospectiva_item">retrospectiva_item</a> referencing (retrospectiva_key)</li>
+</ul>
+</div>
+</div>
+<div class="tableNameHeading">
+<h1>retrospectiva_item<a name="retrospectiva_item"></a>
+</h1>
+<h2>
+      (Physical Name: retrospectiva_item)
+      </h2>
+</div>
+<div class="table">
+<table class="tableDefinition" width="100%">
+<tr>
+<td class="tdTableHeading tdLogicalColName">Logical Column Name</td><td class="tdTableHeading tdPhysicalColName">Physical Column Name</td><td class="tdTableHeading tdDataType">Type</td><td class="tdTableHeading tdPkFlag">PK</td><td class="tdTableHeading tdNullFlag">Nullable</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">retrospectiva_item_key (PK)</td><td class="tdTableDefinition">retrospectiva_item_key</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap>PK</td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">retrospectiva_key
+                &nbsp;(<a href="#retrospectiva">FK</a>)
+              </td><td class="tdTableDefinition">retrospectiva_key</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">tipo_retrospectiva_item_key</td><td class="tdTableDefinition">tipo_retrospectiva_item_key</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">descricao</td><td class="tdTableDefinition">descricao</td><td class="tdTableDefinition">VARCHAR(255)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+</table>
+<div class="references">
+<p class="subTitle">References</p>
+<ul>
+<li>
+<a href="#retrospectiva">retrospectiva</a> through (retrospectiva_key)</li>
+</ul>
+</div>
+</div>
+<div class="tableNameHeading">
+<h1>script<a name="script"></a>
+</h1>
+<h2>
+      (Physical Name: script)
+      </h2>
+</div>
+<div class="table">
+<table class="tableDefinition" width="100%">
+<tr>
+<td class="tdTableHeading tdLogicalColName">Logical Column Name</td><td class="tdTableHeading tdPhysicalColName">Physical Column Name</td><td class="tdTableHeading tdDataType">Type</td><td class="tdTableHeading tdPkFlag">PK</td><td class="tdTableHeading tdNullFlag">Nullable</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">script_key (PK)</td><td class="tdTableDefinition">script_key</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap>PK</td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">descricao</td><td class="tdTableDefinition">descricao</td><td class="tdTableDefinition">VARCHAR(120)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">script</td><td class="tdTableDefinition">script</td><td class="tdTableDefinition">VARCHAR(2147483647)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+</table>
+<div class="references">
+<p class="subTitle">Referenced By</p>
+<ul>
+<li>
+<a href="#execucao">execucao</a> referencing (script_key)</li>
+</ul>
+</div>
+</div>
+<div class="tableNameHeading">
+<h1>sprint<a name="sprint"></a>
+</h1>
+<h2>
+      (Physical Name: sprint)
+      </h2>
+</div>
+<div class="table">
+<table class="tableDefinition" width="100%">
+<tr>
+<td class="tdTableHeading tdLogicalColName">Logical Column Name</td><td class="tdTableHeading tdPhysicalColName">Physical Column Name</td><td class="tdTableHeading tdDataType">Type</td><td class="tdTableHeading tdPkFlag">PK</td><td class="tdTableHeading tdNullFlag">Nullable</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">sprint_key (PK)</td><td class="tdTableDefinition">sprint_key</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap>PK</td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">nome</td><td class="tdTableDefinition">nome</td><td class="tdTableDefinition">VARCHAR(255)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">data_inicial</td><td class="tdTableDefinition">data_inicial</td><td class="tdTableDefinition">TIMESTAMP</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">data_final</td><td class="tdTableDefinition">data_final</td><td class="tdTableDefinition">TIMESTAMP</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">fechado</td><td class="tdTableDefinition">fechado</td><td class="tdTableDefinition">BOOLEAN</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">atual</td><td class="tdTableDefinition">atual</td><td class="tdTableDefinition">BOOLEAN</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+</table>
+<div class="references">
+<p class="subTitle">Referenced By</p>
+<ul>
+<li>
+<a href="#ticket">ticket</a> referencing (sprint_key)</li>
+<li>
+<a href="#retrospectiva">retrospectiva</a> referencing (sprint_key)</li>
+<li>
+<a href="#retrospectiva">retrospectiva</a> referencing (sprint_key)</li>
+<li>
+<a href="#ticket">ticket</a> referencing (sprint_key)</li>
+</ul>
+</div>
+</div>
+<div class="tableNameHeading">
+<h1>ticket<a name="ticket"></a>
+</h1>
+<h2>
+      (Physical Name: ticket)
+      </h2>
+</div>
+<div class="table">
+<table class="tableDefinition" width="100%">
+<tr>
+<td class="tdTableHeading tdLogicalColName">Logical Column Name</td><td class="tdTableHeading tdPhysicalColName">Physical Column Name</td><td class="tdTableHeading tdDataType">Type</td><td class="tdTableHeading tdPkFlag">PK</td><td class="tdTableHeading tdNullFlag">Nullable</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">ticket_key (PK)</td><td class="tdTableDefinition">ticket_key</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap>PK</td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">titulo</td><td class="tdTableDefinition">titulo</td><td class="tdTableDefinition">VARCHAR(255)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">descricao</td><td class="tdTableDefinition">descricao</td><td class="tdTableDefinition">VARCHAR(2147483647)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">cliente</td><td class="tdTableDefinition">cliente</td><td class="tdTableDefinition">VARCHAR(255)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">solicitador</td><td class="tdTableDefinition">solicitador</td><td class="tdTableDefinition">VARCHAR(255)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">branch</td><td class="tdTableDefinition">branch</td><td class="tdTableDefinition">VARCHAR(255)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">valor_de_negocio</td><td class="tdTableDefinition">valor_de_negocio</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">esforco</td><td class="tdTableDefinition">esforco</td><td class="tdTableDefinition">DOUBLE</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">par</td><td class="tdTableDefinition">par</td><td class="tdTableDefinition">BOOLEAN</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">planejado</td><td class="tdTableDefinition">planejado</td><td class="tdTableDefinition">BOOLEAN</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">data_de_criacao</td><td class="tdTableDefinition">data_de_criacao</td><td class="tdTableDefinition">TIMESTAMP</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">data_de_pronto</td><td class="tdTableDefinition">data_de_pronto</td><td class="tdTableDefinition">TIMESTAMP</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">reporter_key
+                &nbsp;(<a href="#usuario">FK</a>)
+              
+                &nbsp;(<a href="#usuario">FK</a>)
+              </td><td class="tdTableDefinition">reporter_key</td><td class="tdTableDefinition">VARCHAR(255)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">pai
+                &nbsp;(<a href="#ticket">FK</a>)
+              </td><td class="tdTableDefinition">pai</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">kanban_status_key
+                &nbsp;(<a href="#kanban_status">FK</a>)
+              </td><td class="tdTableDefinition">kanban_status_key</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">sprint
+                &nbsp;(<a href="#sprint">FK</a>)
+              
+                &nbsp;(<a href="#sprint">FK</a>)
+              </td><td class="tdTableDefinition">sprint</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">tipo_de_ticket_key
+                &nbsp;(<a href="#tipo_de_ticket">FK</a>)
+              </td><td class="tdTableDefinition">tipo_de_ticket_key</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">backlog_key
+                &nbsp;(<a href="#backlog">FK</a>)
+              </td><td class="tdTableDefinition">backlog_key</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">prioridade</td><td class="tdTableDefinition">prioridade</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">cliente_key
+                &nbsp;(<a href="#cliente">FK</a>)
+              </td><td class="tdTableDefinition">cliente_key</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">prioridade_do_cliente</td><td class="tdTableDefinition">prioridade_do_cliente</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+</table>
+<div class="references">
+<p class="subTitle">References</p>
+<ul>
+<li>
+<a href="#backlog">backlog</a> through (backlog_key)</li>
+<li>
+<a href="#cliente">cliente</a> through (cliente_key)</li>
+<li>
+<a href="#kanban_status">kanban_status</a> through (kanban_status_key)</li>
+<li>
+<a href="#ticket">ticket</a> through (pai)</li>
+<li>
+<a href="#sprint">sprint</a> through (sprint)</li>
+<li>
+<a href="#sprint">sprint</a> through (sprint)</li>
+<li>
+<a href="#tipo_de_ticket">tipo_de_ticket</a> through (tipo_de_ticket_key)</li>
+<li>
+<a href="#usuario">usuario</a> through (reporter_key)</li>
+<li>
+<a href="#usuario">usuario</a> through (reporter_key)</li>
+</ul>
+<p class="subTitle">Referenced By</p>
+<ul>
+<li>
+<a href="#ticket_comentario">ticket_comentario</a> referencing (ticket_key)</li>
+<li>
+<a href="#ticket">ticket</a> referencing (ticket_key)</li>
+<li>
+<a href="#ticket_comentario">ticket_comentario</a> referencing (ticket_key)</li>
+<li>
+<a href="#ticket_desenvolvedor">ticket_desenvolvedor</a> referencing (ticket_key)</li>
+<li>
+<a href="#ticket_log">ticket_log</a> referencing (ticket_key)</li>
+<li>
+<a href="#ticket_testador">ticket_testador</a> referencing (ticket_key)</li>
+</ul>
+</div>
+</div>
+<div class="tableNameHeading">
+<h1>ticket_comentario<a name="ticket_comentario"></a>
+</h1>
+<h2>
+      (Physical Name: ticket_comentario)
+      </h2>
+</div>
+<div class="table">
+<table class="tableDefinition" width="100%">
+<tr>
+<td class="tdTableHeading tdLogicalColName">Logical Column Name</td><td class="tdTableHeading tdPhysicalColName">Physical Column Name</td><td class="tdTableHeading tdDataType">Type</td><td class="tdTableHeading tdPkFlag">PK</td><td class="tdTableHeading tdNullFlag">Nullable</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">ticket_comentario_key (PK)</td><td class="tdTableDefinition">ticket_comentario_key</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap>PK</td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">usuario_key
+                &nbsp;(<a href="#usuario">FK</a>)
+              
+                &nbsp;(<a href="#usuario">FK</a>)
+              </td><td class="tdTableDefinition">usuario_key</td><td class="tdTableDefinition">VARCHAR(255)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">data</td><td class="tdTableDefinition">data</td><td class="tdTableDefinition">TIMESTAMP</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">texto</td><td class="tdTableDefinition">texto</td><td class="tdTableDefinition">VARCHAR(2147483647)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">ticket_key
+                &nbsp;(<a href="#ticket">FK</a>)
+              
+                &nbsp;(<a href="#ticket">FK</a>)
+              </td><td class="tdTableDefinition">ticket_key</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+</table>
+<div class="references">
+<p class="subTitle">References</p>
+<ul>
+<li>
+<a href="#ticket">ticket</a> through (ticket_key)</li>
+<li>
+<a href="#ticket">ticket</a> through (ticket_key)</li>
+<li>
+<a href="#usuario">usuario</a> through (usuario_key)</li>
+<li>
+<a href="#usuario">usuario</a> through (usuario_key)</li>
+</ul>
+</div>
+</div>
+<div class="tableNameHeading">
+<h1>ticket_desenvolvedor<a name="ticket_desenvolvedor"></a>
+</h1>
+<h2>
+      (Physical Name: ticket_desenvolvedor)
+      </h2>
+</div>
+<div class="table">
+<table class="tableDefinition" width="100%">
+<tr>
+<td class="tdTableHeading tdLogicalColName">Logical Column Name</td><td class="tdTableHeading tdPhysicalColName">Physical Column Name</td><td class="tdTableHeading tdDataType">Type</td><td class="tdTableHeading tdPkFlag">PK</td><td class="tdTableHeading tdNullFlag">Nullable</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">ticket_key (PK)
+                &nbsp;(<a href="#ticket">FK</a>)
+              </td><td class="tdTableDefinition">ticket_key</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap>PK</td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">usuario_key (PK)
+                &nbsp;(<a href="#usuario">FK</a>)
+              
+                &nbsp;(<a href="#usuario">FK</a>)
+              </td><td class="tdTableDefinition">usuario_key</td><td class="tdTableDefinition">VARCHAR(255)</td><td class="tdTableDefinition" nowrap>PK</td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+</table>
+<div class="references">
+<p class="subTitle">References</p>
+<ul>
+<li>
+<a href="#ticket">ticket</a> through (ticket_key)</li>
+<li>
+<a href="#usuario">usuario</a> through (usuario_key)</li>
+<li>
+<a href="#usuario">usuario</a> through (usuario_key)</li>
+</ul>
+</div>
+</div>
+<div class="tableNameHeading">
+<h1>ticket_log<a name="ticket_log"></a>
+</h1>
+<h2>
+      (Physical Name: ticket_log)
+      </h2>
+</div>
+<div class="table">
+<table class="tableDefinition" width="100%">
+<tr>
+<td class="tdTableHeading tdLogicalColName">Logical Column Name</td><td class="tdTableHeading tdPhysicalColName">Physical Column Name</td><td class="tdTableHeading tdDataType">Type</td><td class="tdTableHeading tdPkFlag">PK</td><td class="tdTableHeading tdNullFlag">Nullable</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">ticket_history_key (PK)</td><td class="tdTableDefinition">ticket_history_key</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap>PK</td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">campo</td><td class="tdTableDefinition">campo</td><td class="tdTableDefinition">VARCHAR(255)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">operacao</td><td class="tdTableDefinition">operacao</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">valor_antigo</td><td class="tdTableDefinition">valor_antigo</td><td class="tdTableDefinition">VARCHAR(2147483647)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">valor_novo</td><td class="tdTableDefinition">valor_novo</td><td class="tdTableDefinition">VARCHAR(2147483647)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">data</td><td class="tdTableDefinition">data</td><td class="tdTableDefinition">TIMESTAMP</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">usuario</td><td class="tdTableDefinition">usuario</td><td class="tdTableDefinition">VARCHAR(255)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">ticket_key
+                &nbsp;(<a href="#ticket">FK</a>)
+              </td><td class="tdTableDefinition">ticket_key</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+</table>
+<div class="references">
+<p class="subTitle">References</p>
+<ul>
+<li>
+<a href="#ticket">ticket</a> through (ticket_key)</li>
+</ul>
+</div>
+</div>
+<div class="tableNameHeading">
+<h1>ticket_testador<a name="ticket_testador"></a>
+</h1>
+<h2>
+      (Physical Name: ticket_testador)
+      </h2>
+</div>
+<div class="table">
+<table class="tableDefinition" width="100%">
+<tr>
+<td class="tdTableHeading tdLogicalColName">Logical Column Name</td><td class="tdTableHeading tdPhysicalColName">Physical Column Name</td><td class="tdTableHeading tdDataType">Type</td><td class="tdTableHeading tdPkFlag">PK</td><td class="tdTableHeading tdNullFlag">Nullable</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">ticket_key (PK)
+                &nbsp;(<a href="#ticket">FK</a>)
+              </td><td class="tdTableDefinition">ticket_key</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap>PK</td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">usuario_key (PK)
+                &nbsp;(<a href="#usuario">FK</a>)
+              
+                &nbsp;(<a href="#usuario">FK</a>)
+              </td><td class="tdTableDefinition">usuario_key</td><td class="tdTableDefinition">VARCHAR(255)</td><td class="tdTableDefinition" nowrap>PK</td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+</table>
+<div class="references">
+<p class="subTitle">References</p>
+<ul>
+<li>
+<a href="#ticket">ticket</a> through (ticket_key)</li>
+<li>
+<a href="#usuario">usuario</a> through (usuario_key)</li>
+<li>
+<a href="#usuario">usuario</a> through (usuario_key)</li>
+</ul>
+</div>
+</div>
+<div class="tableNameHeading">
+<h1>tipo_de_ticket<a name="tipo_de_ticket"></a>
+</h1>
+<h2>
+      (Physical Name: tipo_de_ticket)
+      </h2>
+</div>
+<div class="table">
+<table class="tableDefinition" width="100%">
+<tr>
+<td class="tdTableHeading tdLogicalColName">Logical Column Name</td><td class="tdTableHeading tdPhysicalColName">Physical Column Name</td><td class="tdTableHeading tdDataType">Type</td><td class="tdTableHeading tdPkFlag">PK</td><td class="tdTableHeading tdNullFlag">Nullable</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">tipo_de_ticket_key (PK)</td><td class="tdTableDefinition">tipo_de_ticket_key</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap>PK</td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">descricao</td><td class="tdTableDefinition">descricao</td><td class="tdTableDefinition">VARCHAR(255)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+</table>
+<div class="references">
+<p class="subTitle">Referenced By</p>
+<ul>
+<li>
+<a href="#ticket">ticket</a> referencing (tipo_de_ticket_key)</li>
+</ul>
+</div>
+</div>
+<div class="tableNameHeading">
+<h1>tipo_retrospectiva_item<a name="tipo_retrospectiva_item"></a>
+</h1>
+<h2>
+      (Physical Name: tipo_retrospectiva_item)
+      </h2>
+</div>
+<div class="table">
+<table class="tableDefinition" width="100%">
+<tr>
+<td class="tdTableHeading tdLogicalColName">Logical Column Name</td><td class="tdTableHeading tdPhysicalColName">Physical Column Name</td><td class="tdTableHeading tdDataType">Type</td><td class="tdTableHeading tdPkFlag">PK</td><td class="tdTableHeading tdNullFlag">Nullable</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">tipo_retrospectiva_item_key (PK)
+                &nbsp;(<a href="#tipo_retrospectiva_item">FK</a>)
+              </td><td class="tdTableDefinition">tipo_retrospectiva_item_key</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap>PK</td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">descricao</td><td class="tdTableDefinition">descricao</td><td class="tdTableDefinition">VARCHAR(120)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+</table>
+<div class="references">
+<p class="subTitle">References</p>
+<ul>
+<li>
+<a href="#tipo_retrospectiva_item">tipo_retrospectiva_item</a> through (tipo_retrospectiva_item_key)</li>
+</ul>
+<p class="subTitle">Referenced By</p>
+<ul>
+<li>
+<a href="#tipo_retrospectiva_item">tipo_retrospectiva_item</a> referencing (tipo_retrospectiva_item_key)</li>
+</ul>
+</div>
+</div>
+<div class="tableNameHeading">
+<h1>usuario<a name="usuario"></a>
+</h1>
+<h2>
+      (Physical Name: usuario)
+      </h2>
+</div>
+<div class="table">
+<table class="tableDefinition" width="100%">
+<tr>
+<td class="tdTableHeading tdLogicalColName">Logical Column Name</td><td class="tdTableHeading tdPhysicalColName">Physical Column Name</td><td class="tdTableHeading tdDataType">Type</td><td class="tdTableHeading tdPkFlag">PK</td><td class="tdTableHeading tdNullFlag">Nullable</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">username (PK)</td><td class="tdTableDefinition">username</td><td class="tdTableDefinition">VARCHAR(100)</td><td class="tdTableDefinition" nowrap>PK</td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">password</td><td class="tdTableDefinition">password</td><td class="tdTableDefinition">VARCHAR(30)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">nome</td><td class="tdTableDefinition">nome</td><td class="tdTableDefinition">VARCHAR(150)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">email</td><td class="tdTableDefinition">email</td><td class="tdTableDefinition">VARCHAR(170)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">email_md5</td><td class="tdTableDefinition">email_md5</td><td class="tdTableDefinition">VARCHAR(170)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">cliente_key
+                &nbsp;(<a href="#cliente">FK</a>)
+              </td><td class="tdTableDefinition">cliente_key</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+</table>
+<div class="references">
+<p class="subTitle">References</p>
+<ul>
+<li>
+<a href="#cliente">cliente</a> through (cliente_key)</li>
+</ul>
+<p class="subTitle">Referenced By</p>
+<ul>
+<li>
+<a href="#ticket_comentario">ticket_comentario</a> referencing (username)</li>
+<li>
+<a href="#ticket">ticket</a> referencing (username)</li>
+<li>
+<a href="#execucao">execucao</a> referencing (username)</li>
+<li>
+<a href="#ticket_desenvolvedor">ticket_desenvolvedor</a> referencing (username)</li>
+<li>
+<a href="#ticket_testador">ticket_testador</a> referencing (username)</li>
+<li>
+<a href="#execucao">execucao</a> referencing (username)</li>
+<li>
+<a href="#ticket">ticket</a> referencing (username)</li>
+<li>
+<a href="#ticket_comentario">ticket_comentario</a> referencing (username)</li>
+<li>
+<a href="#ticket_desenvolvedor">ticket_desenvolvedor</a> referencing (username)</li>
+<li>
+<a href="#ticket_testador">ticket_testador</a> referencing (username)</li>
+<li>
+<a href="#usuario_papel">usuario_papel</a> referencing (username)</li>
+</ul>
+</div>
+</div>
+<div class="tableNameHeading">
+<h1>usuario_papel<a name="usuario_papel"></a>
+</h1>
+<h2>
+      (Physical Name: usuario_papel)
+      </h2>
+</div>
+<div class="table">
+<table class="tableDefinition" width="100%">
+<tr>
+<td class="tdTableHeading tdLogicalColName">Logical Column Name</td><td class="tdTableHeading tdPhysicalColName">Physical Column Name</td><td class="tdTableHeading tdDataType">Type</td><td class="tdTableHeading tdPkFlag">PK</td><td class="tdTableHeading tdNullFlag">Nullable</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">usuario_key (PK)
+                &nbsp;(<a href="#usuario">FK</a>)
+              </td><td class="tdTableDefinition">usuario_key</td><td class="tdTableDefinition">VARCHAR(255)</td><td class="tdTableDefinition" nowrap>PK</td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">papel_key (PK)
+                &nbsp;(<a href="#papel">FK</a>)
+              </td><td class="tdTableDefinition">papel_key</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap>PK</td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+</table>
+<div class="references">
+<p class="subTitle">References</p>
+<ul>
+<li>
+<a href="#papel">papel</a> through (papel_key)</li>
+<li>
+<a href="#usuario">usuario</a> through (usuario_key)</li>
+</ul>
+</div>
+</div>
+</body>
+</html>
